@@ -28,7 +28,7 @@ public class Main
     public static void preInit(FMLPreInitializationEvent event) { RegistryHandler.preInitRegistries(); }
     
     @EventHandler
-    public static void init(FMLInitializationEvent event) {}
+    public static void init(FMLInitializationEvent event) { RegistryHandler.initRegistries(); }
     
     @EventHandler
     public static void postInit(FMLPostInitializationEvent event) {}

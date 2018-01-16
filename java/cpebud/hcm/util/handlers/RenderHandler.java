@@ -9,9 +9,11 @@ import cpebud.hcm.entity.render.RenderChickenEnder;
 import cpebud.hcm.entity.render.RenderChickenExplosive;
 import cpebud.hcm.entity.render.RenderChickenFiery;
 import cpebud.hcm.entity.render.RenderChickenGhastly;
-import cpebud.hcm.entity.render.RenderEggExplosive;
+import cpebud.hcm.init.ItemInit;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
@@ -54,5 +56,11 @@ public class RenderHandler
     			return new RenderChickenGhastly(manager);
     		}
     	});
+    }
+    
+    public static void registerEntityItemRenders()
+    {
+    	RenderingRegistry.registerEntityRenderingHandler(EntityEggExplosive.class, new RenderSnowball<EntityEggExplosive>(Minecraft.getMinecraft().getRenderManager(), ItemInit.EGG_EXPLOSIVE, Minecraft.getMinecraft().getRenderItem()));;
+
     }
 }

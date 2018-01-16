@@ -37,6 +37,8 @@ public abstract class EntityEggBase extends EntityThrowable
         EntityThrowable.registerFixesThrowable(fixer, "ThrownEgg");
     }
     
+    public void setNewChicken() {}
+    
 	private Item EGGS;
 	protected Item getEggs() 
 	{
@@ -45,16 +47,6 @@ public abstract class EntityEggBase extends EntityThrowable
     protected void setEggs(Item EGGS)
 	{
 	    this.EGGS = EGGS;
-	}
-    
-    private Entity CHICKEN;
-	protected Entity getChicken() 
-	{
-	    return CHICKEN;
-	}
-    protected void setChicken(Entity CHICKEN)
-	{
-	    this.CHICKEN = CHICKEN;
 	}
 
     /**
@@ -97,10 +89,7 @@ public abstract class EntityEggBase extends EntityThrowable
 
                 for (int j = 0; j < i; ++j)
                 {
-                    EntityChicken entitychicken = new EntityChicken(this.world);
-                    entitychicken.setGrowingAge(-24000);
-                    entitychicken.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
-                    this.world.spawnEntity(entitychicken);
+                    setNewChicken();
                 }
             }
 
@@ -108,4 +97,6 @@ public abstract class EntityEggBase extends EntityThrowable
             this.setDead();
         }
     }
+
+	
 }

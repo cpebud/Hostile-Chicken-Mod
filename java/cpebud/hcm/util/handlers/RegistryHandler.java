@@ -35,4 +35,9 @@ public class RegistryHandler
 		EntityInit.registerEntities();
 		RenderHandler.registerEntityRenders();
 	}
+	
+	public static void initRegistries()
+	{
+		RenderHandler.registerEntityItemRenders();
+	}
 }
