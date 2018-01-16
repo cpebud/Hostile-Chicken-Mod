@@ -4,7 +4,10 @@ import cpebud.hcm.entity.EntityChickenEnder;
 import cpebud.hcm.entity.EntityChickenExplosive;
 import cpebud.hcm.entity.EntityChickenFiery;
 import cpebud.hcm.entity.EntityChickenGhastly;
+import cpebud.hcm.entity.EntityEggEnder;
 import cpebud.hcm.entity.EntityEggExplosive;
+import cpebud.hcm.entity.EntityEggFiery;
+import cpebud.hcm.entity.EntityEggGhastly;
 import cpebud.hcm.entity.render.RenderChickenEnder;
 import cpebud.hcm.entity.render.RenderChickenExplosive;
 import cpebud.hcm.entity.render.RenderChickenFiery;
@@ -60,7 +63,10 @@ public class RenderHandler
     
     public static void registerEntityItemRenders()
     {
+    	RenderingRegistry.registerEntityRenderingHandler(EntityEggEnder.class, new RenderSnowball<EntityEggEnder>(Minecraft.getMinecraft().getRenderManager(), ItemInit.EGG_ENDER, Minecraft.getMinecraft().getRenderItem()));;
     	RenderingRegistry.registerEntityRenderingHandler(EntityEggExplosive.class, new RenderSnowball<EntityEggExplosive>(Minecraft.getMinecraft().getRenderManager(), ItemInit.EGG_EXPLOSIVE, Minecraft.getMinecraft().getRenderItem()));;
+    	RenderingRegistry.registerEntityRenderingHandler(EntityEggFiery.class, new RenderSnowball<EntityEggFiery>(Minecraft.getMinecraft().getRenderManager(), ItemInit.EGG_FIERY, Minecraft.getMinecraft().getRenderItem()));;
+    	RenderingRegistry.registerEntityRenderingHandler(EntityEggGhastly.class, new RenderSnowball<EntityEggGhastly>(Minecraft.getMinecraft().getRenderManager(), ItemInit.EGG_GHASTLY, Minecraft.getMinecraft().getRenderItem()));;
 
     }
 }

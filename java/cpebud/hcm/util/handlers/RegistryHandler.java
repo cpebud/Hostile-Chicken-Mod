@@ -2,7 +2,7 @@ package cpebud.hcm.util.handlers;
 
 import cpebud.hcm.init.EntityInit;
 import cpebud.hcm.init.ItemInit;
-import cpebud.hcm.util.IHasModel;
+import cpebud.hcm.util.interfaces.IHasModel;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;

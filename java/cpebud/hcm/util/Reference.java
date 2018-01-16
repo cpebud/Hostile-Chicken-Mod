@@ -20,5 +20,8 @@ public class Reference
 	//EntityEgg IDs
 	private static int EggID = 200;
 	public static final int ENTITY_EGGBASE = EggID;
+	public static final int ENTITY_EGGENDER = ++EggID;
 	public static final int ENTITY_EGGEXPLOSIVE = ++EggID;
+	public static final int ENTITY_EGGFIERY = ++EggID;
+	public static final int ENTITY_EGGGHASTLY = ++EggID;
 }

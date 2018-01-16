@@ -2,7 +2,7 @@ package cpebud.hcm.objects.items;
 
 import cpebud.hcm.Main;
 import cpebud.hcm.init.ItemInit;
-import cpebud.hcm.util.IHasModel;
+import cpebud.hcm.util.interfaces.IHasModel;
 import net.minecraft.item.Item;
 
 public class ItemBase extends Item implements IHasModel

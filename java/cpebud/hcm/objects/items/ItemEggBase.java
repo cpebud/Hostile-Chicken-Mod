@@ -3,7 +3,7 @@ package cpebud.hcm.objects.items;
 import cpebud.hcm.Main;
 import cpebud.hcm.entity.EntityEggExplosive;
 import cpebud.hcm.init.ItemInit;
-import cpebud.hcm.util.IHasModel;
+import cpebud.hcm.util.interfaces.IHasModel;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityEgg;
 import net.minecraft.init.SoundEvents;

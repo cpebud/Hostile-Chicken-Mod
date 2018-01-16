@@ -5,7 +5,10 @@ import cpebud.hcm.entity.EntityChickenEnder;
 import cpebud.hcm.entity.EntityChickenExplosive;
 import cpebud.hcm.entity.EntityChickenFiery;
 import cpebud.hcm.entity.EntityChickenGhastly;
+import cpebud.hcm.entity.EntityEggEnder;
 import cpebud.hcm.entity.EntityEggExplosive;
+import cpebud.hcm.entity.EntityEggFiery;
+import cpebud.hcm.entity.EntityEggGhastly;
 import cpebud.hcm.util.Reference;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -22,7 +25,11 @@ public class EntityInit
 		registerEntity("chicken_ghastly", EntityChickenGhastly.class, Reference.ENTITY_CHICKENGHASTLY, 64, 15790320, 5658198);
 		
 		//Registering ItemEntities
+		registerEntityItem("entityegg_ender", EntityEggEnder.class, Reference.ENTITY_EGGENDER);
 		registerEntityItem("entityegg_explosive", EntityEggExplosive.class, Reference.ENTITY_EGGEXPLOSIVE);
+		registerEntityItem("entityegg_fiery", EntityEggFiery.class, Reference.ENTITY_EGGFIERY);
+		registerEntityItem("entityegg_ghastly", EntityEggGhastly.class, Reference.ENTITY_EGGGHASTLY);
+
 	}
 	
 	private static void registerEntityItem(String name, Class<? extends Entity> entity, int id)
