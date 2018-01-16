@@ -1,0 +1,11 @@
+itemGroup.HCMTAB=Hostile Chicken Mod
+
+entity.chicken_ender.name=Ender Chicken
+entity.chicken_explosive.name=Explosive Chicken
+entity.chicken_fiery.name=Fiery Chicken
+entity.chicken_ghastly.name=Ghastly Chicken
+
+item.egg_ender.name=Ender Egg
+item.egg_explosive.name=Explosive Egg
+item.egg_fiery.name=Fiery Egg
+item.egg_ghastly.name=Ghastly Egg
