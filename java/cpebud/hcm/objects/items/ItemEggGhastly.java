@@ -13,7 +13,7 @@ public class ItemEggGhastly extends ItemEggBase implements IHasModel
 	}
 
 	@Override
-	public void setEggThrown(World worldIn, EntityPlayer playerIn)
+	protected void setEggThrown(World worldIn, EntityPlayer playerIn)
 	{
         EntityEggGhastly entityegg = new EntityEggGhastly(worldIn, playerIn);
         entityegg.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);

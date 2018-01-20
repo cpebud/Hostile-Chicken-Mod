@@ -24,7 +24,7 @@ public class EntityEggExplosive extends EntityEggBase
 	}
 	
 	@Override
-	public void setNewChicken()
+	protected void setNewChicken()
 	{
 		EntityChickenExplosive entitychicken = new EntityChickenExplosive(this.world);
         entitychicken.setGrowingAge(-24000);

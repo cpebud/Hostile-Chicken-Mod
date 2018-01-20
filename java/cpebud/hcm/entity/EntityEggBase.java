@@ -37,7 +37,7 @@ public abstract class EntityEggBase extends EntityThrowable
         EntityThrowable.registerFixesThrowable(fixer, "ThrownEgg");
     }
     
-    public void setNewChicken() {}
+    protected abstract void setNewChicken();
     
 	private Item EGGS;
 	protected Item getEggs() 

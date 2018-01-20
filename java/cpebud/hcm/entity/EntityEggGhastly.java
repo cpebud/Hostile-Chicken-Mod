@@ -23,7 +23,7 @@ public class EntityEggGhastly extends EntityEggBase
 	}
 	
 	@Override
-	public void setNewChicken()
+	protected void setNewChicken()
 	{
 		EntityChickenGhastly entitychicken = new EntityChickenGhastly(this.world);
         entitychicken.setGrowingAge(-24000);

@@ -16,7 +16,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
-public class ItemEggBase extends Item
+public abstract class ItemEggBase extends Item
 {
     public ItemEggBase(String name)
     {
@@ -33,7 +33,7 @@ public class ItemEggBase extends Item
 		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 	
-	public void setEggThrown(World worldIn, EntityPlayer playerIn) {}
+	protected abstract void setEggThrown(World worldIn, EntityPlayer playerIn);
 	
 	
     /**

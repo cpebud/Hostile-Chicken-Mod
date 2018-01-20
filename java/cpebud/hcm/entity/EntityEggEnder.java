@@ -23,7 +23,7 @@ public class EntityEggEnder extends EntityEggBase
 	}
 	
 	@Override
-	public void setNewChicken()
+	protected void setNewChicken()
 	{
 		EntityChickenEnder entitychicken = new EntityChickenEnder(this.world);
         entitychicken.setGrowingAge(-24000);

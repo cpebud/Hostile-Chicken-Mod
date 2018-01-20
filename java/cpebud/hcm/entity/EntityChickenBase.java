@@ -48,7 +48,6 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
     public float wingRotDelta = 1.0F;
     /** The time until the next egg is spawned. */
     public int timeUntilNextEgg;
-    public boolean chickenJockey;
 	
     private Item EGG;
 	protected Item getEgg() 
@@ -66,18 +65,6 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
         this.setSize(0.4F, 0.7F);
         this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
         this.setPathPriority(PathNodeType.WATER, 0.0F);
-    }
-
-    protected void initEntityAI()
-    {
-        this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIPanic(this, 1.4D));
-        this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
-        this.tasks.addTask(3, new EntityAITempt(this, 1.0D, false, TEMPTATION_ITEMS));
-        this.tasks.addTask(4, new EntityAIFollowParent(this, 1.1D));
-        this.tasks.addTask(5, new EntityAIWanderAvoidWater(this, 1.0D));
-        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-        this.tasks.addTask(7, new EntityAILookIdle(this));
     }
 
     public float getEyeHeight()
@@ -119,7 +106,7 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
 
         this.wingRotation += this.wingRotDelta * 2.0F;
 
-        if (!this.world.isRemote && !this.isChild() && !this.isChickenJockey() && --this.timeUntilNextEgg <= 0)
+        if (!this.world.isRemote && !this.isChild() && --this.timeUntilNextEgg <= 0)
         {
             this.playSound(SoundEvents.ENTITY_CHICKEN_EGG, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
             this.dropItem(getEgg(), 1);
@@ -165,15 +152,7 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
     {
         return TEMPTATION_ITEMS.contains(stack.getItem());
     }
-
-    /**
-     * Get the experience points the entity currently has.
-     */
-    protected int getExperiencePoints(EntityPlayer player)
-    {
-        return this.isChickenJockey() ? 10 : super.getExperiencePoints(player);
-    }
-
+   
     public static void registerFixesChicken(DataFixer fixer)
     {
         EntityLiving.registerFixesMob(fixer, EntityChicken.class);
@@ -185,7 +164,6 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
     public void readEntityFromNBT(NBTTagCompound compound)
     {
         super.readEntityFromNBT(compound);
-        this.chickenJockey = compound.getBoolean("IsChickenJockey");
 
         if (compound.hasKey("EggLayTime"))
         {
@@ -199,16 +177,7 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
     public void writeEntityToNBT(NBTTagCompound compound)
     {
         super.writeEntityToNBT(compound);
-        compound.setBoolean("IsChickenJockey", this.chickenJockey);
         compound.setInteger("EggLayTime", this.timeUntilNextEgg);
-    }
-
-    /**
-     * Determines if an entity can be despawned, used on idle far away entities
-     */
-    protected boolean canDespawn()
-    {
-        return this.isChickenJockey() && !this.isBeingRidden();
     }
 
     public void updatePassenger(Entity passenger)
@@ -224,21 +193,5 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
         {
             ((EntityLivingBase)passenger).renderYawOffset = this.renderYawOffset;
         }
-    }
-
-    /**
-     * Determines if this chicken is a jokey with a zombie riding it.
-     */
-    public boolean isChickenJockey()
-    {
-        return this.chickenJockey;
-    }
-
-    /**
-     * Sets whether this chicken is a jockey or not.
-     */
-    public void setChickenJockey(boolean jockey)
-    {
-        this.chickenJockey = jockey;
     }
 }
