@@ -11,4 +11,4 @@ In Progress:
   ~adding Hostile Mob AI to each chicken entity
   
 Chickens So Far:
-  Creeper, Ghast, Blaze, Enderman
+  Creeper, Ghast, Blaze, Enderman, Giant
