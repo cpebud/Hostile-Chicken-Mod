@@ -5,6 +5,7 @@ import cpebud.hcm.entity.EntityChickenEnder;
 import cpebud.hcm.entity.EntityChickenExplosive;
 import cpebud.hcm.entity.EntityChickenFiery;
 import cpebud.hcm.entity.EntityChickenGhastly;
+import cpebud.hcm.entity.EntityChickenGiantOverworld;
 import cpebud.hcm.entity.EntityEggEnder;
 import cpebud.hcm.entity.EntityEggExplosive;
 import cpebud.hcm.entity.EntityEggFiery;
@@ -23,6 +24,7 @@ public class EntityInit
 		registerEntity("chicken_explosive", EntityChickenExplosive.class, Reference.ENTITY_CHICKENEXPLOSIVE, 64, 1747737, 7500402);
 		registerEntity("chicken_fiery", EntityChickenFiery.class, Reference.ENTITY_CHICKENFIERY, 64, 16776759, 12874776);
 		registerEntity("chicken_ghastly", EntityChickenGhastly.class, Reference.ENTITY_CHICKENGHASTLY, 64, 15790320, 5658198);
+		registerEntity("chicken_giantoverworld", EntityChickenGiantOverworld.class, Reference.ENTITY_CHICKENGIANTOVERWORLD, 64, 13027014, 16711680);
 		
 		//Registering ItemEntities
 		registerEntityItem("entityegg_ender", EntityEggEnder.class, Reference.ENTITY_EGGENDER);

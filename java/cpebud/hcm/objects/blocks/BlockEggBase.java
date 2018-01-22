@@ -123,7 +123,7 @@ public abstract class BlockEggBase extends Block
         {
             for (int i = 0; i < 1000; ++i)
             {
-                BlockPos blockpos = pos.add(worldIn.rand.nextInt(16) - worldIn.rand.nextInt(16), worldIn.rand.nextInt(8) - worldIn.rand.nextInt(8), worldIn.rand.nextInt(16) - worldIn.rand.nextInt(16));
+                BlockPos blockpos = pos.add(worldIn.rand.nextInt(2) - worldIn.rand.nextInt(2), worldIn.rand.nextInt(1) - worldIn.rand.nextInt(1), worldIn.rand.nextInt(2) - worldIn.rand.nextInt(2));
 
                 if (worldIn.isAirBlock(blockpos))
                 {

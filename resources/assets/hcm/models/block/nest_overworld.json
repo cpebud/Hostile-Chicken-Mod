@@ -1,0 +1,6 @@
+{
+    "parent": "block/leaves",
+    "textures": {
+        "all": "hcm:blocks/nest_overworld"
+    }
+}

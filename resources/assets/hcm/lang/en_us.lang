@@ -1,11 +1,19 @@
 itemGroup.HCMTAB=Hostile Chicken Mod
 
+tile.egg_giantoverworld.name=Giant Chicken Egg
+tile.nest_overworld.name=Nest
+
 entity.chicken_ender.name=Ender Chicken
 entity.chicken_explosive.name=Explosive Chicken
 entity.chicken_fiery.name=Fiery Chicken
 entity.chicken_ghastly.name=Ghastly Chicken
+entity.chicken_giantoverworld.name=Giant Chicken
 
 item.egg_ender.name=Ender Egg
 item.egg_explosive.name=Explosive Egg
 item.egg_fiery.name=Fiery Egg
 item.egg_ghastly.name=Ghastly Egg
+item.egg_poison.name=Poison Egg
+item.egg_skeleton.name=Skeleton Egg
+item.egg_undead.name=Undead Egg
+item.egg_wither.name=Wither Egg

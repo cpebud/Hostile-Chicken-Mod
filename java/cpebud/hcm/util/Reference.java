@@ -16,6 +16,7 @@ public class Reference
 	public static final int ENTITY_CHICKENEXPLOSIVE = ++ChickenID;
 	public static final int ENTITY_CHICKENFIERY = ++ChickenID;
 	public static final int ENTITY_CHICKENGHASTLY = ++ChickenID;
+	public static final int ENTITY_CHICKENGIANTOVERWORLD = ++ChickenID;
 	
 	//EntityEgg IDs
 	private static int EggID = 200;

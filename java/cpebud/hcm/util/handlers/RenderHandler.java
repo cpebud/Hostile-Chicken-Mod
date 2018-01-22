@@ -4,6 +4,7 @@ import cpebud.hcm.entity.EntityChickenEnder;
 import cpebud.hcm.entity.EntityChickenExplosive;
 import cpebud.hcm.entity.EntityChickenFiery;
 import cpebud.hcm.entity.EntityChickenGhastly;
+import cpebud.hcm.entity.EntityChickenGiantOverworld;
 import cpebud.hcm.entity.EntityEggEnder;
 import cpebud.hcm.entity.EntityEggExplosive;
 import cpebud.hcm.entity.EntityEggFiery;
@@ -12,6 +13,7 @@ import cpebud.hcm.entity.render.RenderChickenEnder;
 import cpebud.hcm.entity.render.RenderChickenExplosive;
 import cpebud.hcm.entity.render.RenderChickenFiery;
 import cpebud.hcm.entity.render.RenderChickenGhastly;
+import cpebud.hcm.entity.render.RenderChickenGiantOverworld;
 import cpebud.hcm.init.ItemInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.Render;
@@ -57,6 +59,15 @@ public class RenderHandler
     		public Render<? super EntityChickenGhastly> createRenderFor(RenderManager manager)
     		{
     			return new RenderChickenGhastly(manager);
+    		}
+    	});
+    	
+    	RenderingRegistry.registerEntityRenderingHandler(EntityChickenGiantOverworld.class, new IRenderFactory<EntityChickenGiantOverworld>()
+    	{
+    		@Override
+    		public Render<? super EntityChickenGiantOverworld> createRenderFor(RenderManager manager)
+    		{
+    			return new RenderChickenGiantOverworld(manager);
     		}
     	});
     }
