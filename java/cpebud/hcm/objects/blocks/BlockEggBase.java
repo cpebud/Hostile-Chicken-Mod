@@ -138,7 +138,7 @@ public abstract class BlockEggBase extends Block
                             double d1 = (double)blockpos.getX() + (double)(pos.getX() - blockpos.getX()) * d0 + (worldIn.rand.nextDouble() - 0.5D) + 0.5D;
                             double d2 = (double)blockpos.getY() + (double)(pos.getY() - blockpos.getY()) * d0 + worldIn.rand.nextDouble() - 0.5D;
                             double d3 = (double)blockpos.getZ() + (double)(pos.getZ() - blockpos.getZ()) * d0 + (worldIn.rand.nextDouble() - 0.5D) + 0.5D;
-                            worldIn.spawnParticle(EnumParticleTypes.PORTAL, d1, d2, d3, (double)f, (double)f1, (double)f2);
+                            worldIn.spawnParticle(EnumParticleTypes.BLOCK_CRACK, d1, d2, d3, (double)f, (double)f1, (double)f2, Block.getIdFromBlock(BlockInit.BLOCK_NESTOVERWORLD));
                         }
                     }
                     else
